@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCursoProgramacao.View.AlunoBuscarView"
+             Title="Alunos">
+
+    <ContentPage.Resources>
+        <!-- Add more resources here -->
+        <ResourceDictionary Source="/Resources/Styles/AlunoStyle.xaml" />
+        <!-- Add more resources here -->
+    </ContentPage.Resources>
+    
+    <AbsoluteLayout>
+        <!--Scrool Carregamento -->
+        <ScrollView x:Name="scvScroll" Scrolled="scvScroll_Scrolled"
+                    AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,1,1,1" Margin="10,80,10,10" >
+            <!--Lista de Alunos-->
+            <CollectionView AbsoluteLayout.LayoutFlags="All"  x:Name="lstListaAlunos" SelectionMode="Single"
+            ItemsSource="{Binding objAluno.ListaAluno}" SelectionChanged="lstListaAlunos_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="LightGray" Padding="5" Margin="5">
+                            <Grid ColumnDefinitions="150,*,0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                
+                                <!--Items do Grid-->
+                                <Image Source="{Binding imgStr}" WidthRequest="90" HeightRequest="90"
+                       Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Margin="0,1" />
+
+                                <Label Grid.Column="1" Grid.Row="0" FontAttributes="Bold" FontSize="15">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{} {0} {1}">
+                                            <Binding Path="NomeAluno" />
+                                            <Binding Path="SobrenomeAluno" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Label Grid.Column="1" Grid.Row="1" FontAttributes="Bold" FontSize="12" TextColor="Gray"
+                       LineBreakMode="WordWrap">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}Idade: {0} Celular: {1}">
+                                            <Binding Path="Idade" />
+                                            <Binding Path="CelularAluno" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+
+                                <Label Grid.Column="1" Grid.Row="2" FontAttributes="Bold" FontSize="12" TextColor="Gray"
+                       LineBreakMode="WordWrap" VerticalOptions="Start">
+                                    <Label.Text>
+                                        <Binding Path="EnderecoAluno">
+                                            <Binding.StringFormat>
+                                                Endereço: {0}
+                                            </Binding.StringFormat>
+                                        </Binding>
+                                    </Label.Text>
+                                </Label>
+                            </Grid>
+                            <!--Chama i evento do grid selecteChanged-->
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+        </ScrollView>
+
+        <!--Pequisa de Alunos-->
+        <Frame Style="{StaticResource FrameStyle}">
+            <HorizontalStackLayout HorizontalOptions="Center">
+
+                <Image Source="search_icon.png" WidthRequest="30" HeightRequest="30"  Grid.Column="0" Margin="5,5,5,0" />
+                <Entry Placeholder="Nome do Aluno" x:Name="txtBuscarAluno" WidthRequest="300" Completed="txtBuscarAluno_Completed"
+                   TextChanged="txtBuscarAluno_TextChanged" Style="{StaticResource EntryStyle}" ClearButtonVisibility="WhileEditing"/>
+            </HorizontalStackLayout>
+        </Frame>
+
+        <!--Botão Adicionar Alunos-->
+        <Button x:Name="btnAdicionar" Text="+" WidthRequest="50" HeightRequest="50" CornerRadius="30" Clicked="btnAdicionar_Clicked"
+                AbsoluteLayout.LayoutFlags="PositionProportional" AbsoluteLayout.LayoutBounds="0.95,0.95,40,40"  BackgroundColor="DarkCyan"/>
+
+        <!--Barra deProgresso-->
+        <ActivityIndicator IsRunning="{Binding objAluno.IsRefreshing}" x:Name="barraProgresso" Color="DarkCyan"
+              AbsoluteLayout.LayoutFlags="PositionProportional"
+              AbsoluteLayout.LayoutBounds="0.5,0.5,100,100" />
+
+    </AbsoluteLayout>
+
+
+</ContentPage>

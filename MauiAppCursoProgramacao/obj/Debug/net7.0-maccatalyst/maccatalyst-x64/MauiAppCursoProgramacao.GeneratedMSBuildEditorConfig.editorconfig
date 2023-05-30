@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MauiAppCursoProgramacao
+build_property.ProjectDir = C:\Users\Admin\Desktop\MauiAppCursoProgramacao\MauiAppCursoProgramacao\
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/Resources/Styles/AlunoStyle.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.Resources.Styles.AlunoStyle.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\AlunoStyle.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\AlunoStyle.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/Resources/Styles/LoginStyle.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.Resources.Styles.LoginStyle.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\LoginStyle.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\LoginStyle.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/Resources/Styles/MenuStyle.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.Resources.Styles.MenuStyle.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\MenuStyle.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\MenuStyle.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/View/AlunoBuscarView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.View.AlunoBuscarView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AlunoBuscarView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AlunoBuscarView.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/View/AlunoView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.View.AlunoView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\AlunoView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\AlunoView.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/View/LoginView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.View.LoginView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\LoginView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\LoginView.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/View/MenuDetailView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.View.MenuDetailView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MenuDetailView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MenuDetailView.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/View/MenuPrincipalView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.View.MenuPrincipalView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MenuPrincipalView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MenuPrincipalView.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/View/MenuView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.View.MenuView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\MenuView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\MenuView.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/View/UsuarioSenhaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.View.UsuarioSenhaView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UsuarioSenhaView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UsuarioSenhaView.xaml
+
+[C:/Users/Admin/Desktop/MauiAppCursoProgramacao/MauiAppCursoProgramacao/View/UsuarioView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiAppCursoProgramacao.View.UsuarioView.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UsuarioView.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UsuarioView.xaml

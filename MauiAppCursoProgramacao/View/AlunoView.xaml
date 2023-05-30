@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCursoProgramacao.View.AlunoView"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="Cadastro Aluno">
+
+    <!--Imagem -->
+    <StackLayout Padding="30">
+        <Image x:Name="imgAluno" Source="{Binding objAluno.imagen}" WidthRequest="200" Aspect="AspectFill" 
+               HeightRequest="150" Margin="10,10,10,10" />
+
+        <!--Botões - Utilzado Grid Para Alinhamento -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="100" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btSelecionarFoto" Text="Selecionar" BackgroundColor="DarkCyan" Clicked="btSelecionarFoto_Clicked" Margin="5,0"/>
+
+                <Frame x:Name="frameFoto" BackgroundColor="DarkCyan" CornerRadius="5" Padding="5"
+                HorizontalOptions="Center" WidthRequest="30" HeightRequest="30" Grid.Row="0" Grid.Column="1">
+                    <ImageButton x:Name="btnCamera" Clicked="btnCamera_Clicked">
+                        <ImageButton.Source>
+                            <FileImageSource File="photo_icone.png" />
+                        </ImageButton.Source>
+                    </ImageButton>
+                </Frame>
+            </Grid>
+        </StackLayout>
+
+
+        <!--Caixas de Texto Para Preenchimento -->
+        <Label Text="ID:" IsVisible="false" />
+        <Entry Text="{Binding Aluno.IdAluno}" IsVisible="false"/>
+
+
+        <Label Text="Nome:"  FontAttributes="Bold" />
+        <Entry Keyboard="Text" x:Name="txtNome" Text="{Binding objAluno.Aluno.NomeAluno}"
+               toolkit:SetFocusOnEntryCompletedBehavior.NextElement="{x:Reference txtSobrenome}"/>
+
+        <Label Text="Sobrenome:"  FontAttributes="Bold" />
+        <Entry Keyboard="Text" x:Name="txtSobrenome" Text="{Binding objAluno.Aluno.SobrenomeAluno}" 
+               toolkit:SetFocusOnEntryCompletedBehavior.NextElement="{x:Reference txtCpf}"/>
+
+        <Label Text="CPF:"  FontAttributes="Bold" />
+        <Entry Keyboard="Numeric" x:Name="txtCpf" Text="{Binding objAluno.Aluno.CpfAluno}"  TextChanged="txtCpf_TextChanged"
+                toolkit:SetFocusOnEntryCompletedBehavior.NextElement="{x:Reference txtCelular}"/>
+
+
+        <Label Text="Celular:"  FontAttributes="Bold" />
+        <Entry Keyboard="Telephone" x:Name="txtCelular" Text="{Binding objAluno.Aluno.CelularAluno}" TextChanged="txtCelular_TextChanged"
+                toolkit:SetFocusOnEntryCompletedBehavior.NextElement="{x:Reference txtEndereco}"/>
+
+        <Label Text="Endereço:" FontAttributes="Bold" />
+        <Entry x:Name="txtEndereco" Text="{Binding objAluno.Aluno.EnderecoAluno}" 
+               toolkit:SetFocusOnEntryCompletedBehavior.NextElement="{x:Reference dtpDataNascimento}"/>
+
+
+        <Label Text="Data de Nascimento:"  FontAttributes="Bold" />
+        <DatePicker x:Name="dtpDataNascimento" Date="{Binding objAluno.Aluno.DataNascimentoAluno , Mode=TwoWay}" />
+
+        <Label Text="Status:"  FontAttributes="Bold"/>
+        <Picker x:Name="picEstatus" Title="Selecione o status" SelectedItem="{Binding objAluno.Aluno.StatusAluno}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Cursando</x:String>
+                    <x:String>Espera</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+            <Button x:Name="btnCadastrar" Text="Cadastrar" BackgroundColor="DarkCyan" Clicked="btnCadastrar_Clicked"
+                    ToolTipProperties.Text="Click para adiconar aluno"  Margin="2.5,0"/>
+
+    </StackLayout>
+
+</ContentPage>
+    

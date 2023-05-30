@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCursoProgramacao.View.MenuView"
+             Title="Menu">
+
+
+
+    <ContentPage.Resources>
+        <!-- Add more resources here -->
+        <ResourceDictionary Source="/Resources/Styles/MenuStyle.xaml" />
+        <!-- Add more resources here -->
+    </ContentPage.Resources>
+
+
+    <VerticalStackLayout x:Name="LayoutMenu">
+
+        <ListView ItemTapped="lstMenu_ItemTapped" ItemsSource="{Binding objMenuLista.Lista}" x:Name="lstMenu" Style="{StaticResource ListaStyle}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid  Style="{StaticResource GridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Source="{Binding nomeIcone}" Style="{StaticResource ImageStyle}"/>
+                            <Label Grid.Column="1" Text="{Binding nomeDescricao}" Style="{StaticResource LabelStyle}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </VerticalStackLayout>
+</ContentPage>

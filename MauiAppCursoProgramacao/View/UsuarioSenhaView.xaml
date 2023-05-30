@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCursoProgramacao.View.UsuarioSenhaView"
+             Title="Usuário Senha">
+
+    <ContentPage.Resources>
+        <!-- Add more resources here -->
+        <ResourceDictionary Source="/Resources/Styles/LoginStyle.xaml" />
+        <!-- Add more resources here -->
+    </ContentPage.Resources>
+
+    <VerticalStackLayout x:Name="formulario">
+
+
+            <Image Source="usericone.png" 
+               Margin="20,30,20,20"
+               HeightRequest="100" Aspect="AspectFill" WidthRequest="100" />
+
+
+        <Label Text="Senha Atual" Style="{StaticResource LabelStyle}"/>
+        <Frame Style="{StaticResource FrameStyle}">
+            <Entry x:Name="SenhaAtualEntry" Text="{Binding objLogin.loginModel.senhaLogin}"
+               Placeholder="Digite a senha atual" IsPassword="True" Style="{StaticResource EntryStyle}"/>
+        </Frame>
+
+
+        <Label Text="Nova Senha" Style="{StaticResource LabelStyle}"/>
+        <Frame Style="{StaticResource FrameStyle}">
+            <Entry x:Name="NovaSenhaEntry" Text="{Binding objLogin.loginModel.senhaNova}"
+               Placeholder="Digite a nova senha" IsPassword="True" Style="{StaticResource EntryStyle}"/>
+        </Frame>
+
+        <Label Text="Repetir Senha"  Style="{StaticResource LabelStyle}"/>
+        <Frame Style="{StaticResource FrameStyle}">
+            <Entry x:Name="RepetirSenhaEntry" Text="{Binding objLogin.loginModel.senhaRepetidaNova}"
+               Placeholder="Repita a nova senha" IsPassword="True" Style="{StaticResource EntryStyle}"/>
+        </Frame>
+
+        <Button Text="Salvar"  Style="{StaticResource ButtonStyle}" Clicked="Button_Clicked"/>
+
+
+    </VerticalStackLayout>
+
+</ContentPage>

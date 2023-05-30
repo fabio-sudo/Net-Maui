@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCursoProgramacao.View.LoginView"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="LoginView">
+
+
+    <!-- Status Bar Color .cs -->
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior x:Name="statusBar" />
+    </ContentPage.Behaviors>
+
+
+    <ContentPage.Resources>
+        <!-- Add more resources here -->
+        <ResourceDictionary Source="/Resources/Styles/LoginStyle.xaml" />
+        <!-- Add more resources here -->
+    </ContentPage.Resources>
+
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#2196F3" Offset="0" />
+                <GradientStop Color="DarkBlue" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <FlexLayout JustifyContent="Center" AlignItems="Center">
+            <VerticalStackLayout x:Name="layoutLogin">
+                <Image
+                Source="logobook.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="150"
+                HorizontalOptions="Center" />
+
+                <Label x:Name="lbLogin"
+                Text="Login"
+                Style="{StaticResource LoginLabelStyle}" />
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- User -->
+                    <Image Source="usericone.png"
+                    SemanticProperties.Description="Insira o usuário!"
+                    HeightRequest="30"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="0,0,5,0"
+                    Grid.Row="0"
+                    Grid.Column="0" />
+
+                    <Entry x:Name="txtUser" Placeholder="Nome de usuário"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Style="{StaticResource LoginEntryStyle}"
+                    Text="{Binding objLogin.loginModel.userLogin}"
+                    Margin="0,5,0,5" />
+
+                    <!-- Senha -->
+                    <Image Source="senhaicone.png"
+                    SemanticProperties.Description="Insira a Senha!"
+                    HeightRequest="30"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="0,0,5,0"
+                    Grid.Row="1"
+                    Grid.Column="0" />
+
+                    <Entry x:Name="txtSenha" Placeholder="Senha"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    IsPassword="true"
+                    Style="{StaticResource LoginEntryStyle}"
+                    Text="{Binding objLogin.loginModel.senhaLogin}"
+                    Margin="0,5,0,5" 
+                    Unfocused="txtSenha_Unfocused" />
+
+                    <!-- BOTÃO -->
+                    <Button x:Name="btLogar" Text="Entrar" Style="{StaticResource LogarButtonStyle}" Clicked="btLogar_Clicked"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="1" />
+
+                </Grid>
+
+                <ActivityIndicator x:Name="barraProgresso" Color="White" />
+                <Label x:Name="lbCarregando"  Text="Carregando..."
+                IsVisible="false" TextColor="White" HorizontalTextAlignment="Center"/>
+
+            </VerticalStackLayout>
+        </FlexLayout>
+    </Grid>
+
+</ContentPage>

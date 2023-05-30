@@ -1,0 +1,20 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application 
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiAppCursoProgramacao"
+             x:Class="MauiAppCursoProgramacao.App">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="urlBase">https://c575-45-172-144-32.ngrok-free.app</x:String>
+            <x:String x:Key="token">TexteTokenProjeto2023API</x:String>
+            <x:String x:Key="urlLogin" >/api/Login</x:String>
+            <x:String x:Key="urlAluno" >/api/Aluno</x:String>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
